@@ -111,7 +111,7 @@ input[type=submit]:hover{
     height: 10vh;
     position: fixed;
     top: 26vh;
-    left: 40vw;
+    left: 22vw;
 }
 #help h1{
     font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -125,6 +125,27 @@ input[type=submit]:hover{
     opacity: 1;
     cursor: pointer;
 }
+
+#offline{
+    width: 25vw;
+    height: 10vh;
+    position: fixed;
+    top: 26vh;
+    right: 18vw;
+}
+#offline h1{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bold;
+    font-size: 7vh;
+    color: black;
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+}
+#offline:hover > h1{
+    opacity: 1;
+    cursor: pointer;
+}
+
 #helpmodal{
     width: 100vw;
     height: 100vh;
@@ -155,6 +176,50 @@ input[type=submit]:hover{
     font-weight: bold;
     text-overflow: wrap;
 }
+
+
+#offlinemodal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.288);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+#opopup{
+    width: 60vw;
+    height: 65vh;
+    background-color: white;
+    border-radius: 0.2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#opopup h1{
+    font-family: 'Amaranth', sans-serif;
+    font-size: 8vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+#opopup p{
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 4vh;
+    font-weight: bold;
+    text-overflow: wrap;
+    margin-top: 1vh;
+}
+
+#pydown{
+    text-decoration: none;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+
 .mockexcel{
     width: 84vw;
     height:10vh;
@@ -197,6 +262,27 @@ input[type=submit]:hover{
     transition: 0.2s ease-in-out;
 }
 #modalclose:hover{
+    cursor: pointer;
+    color:rgb(156, 14, 14);
+}
+
+#omodalclose{
+    width: 6vw;
+    height: 6vw;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 21vw;
+    top: 17vh;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 15vh;
+    font-weight: bolder;
+    color: rgba(0, 0, 0, 0.438);
+    transform: rotate(45deg);
+    transition: 0.2s ease-in-out;
+}
+#omodalclose:hover{
     cursor: pointer;
     color:rgb(156, 14, 14);
 }

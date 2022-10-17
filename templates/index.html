@@ -26,6 +26,9 @@
     <div id="help">
         <h1>How to use</h1>
     </div>
+    <div id="offline">
+        <h1>For offline use</h1>
+    </div>
 
     <div id="helpmodal">
         <div id="popup">
@@ -89,6 +92,19 @@
         <div id="modalclose">+</div>
     </div>
 
+    <div id="offlinemodal">
+        <div id="opopup">
+            <h1>Offline use with python</h1>
+            <p>Download the python file below for use offline.</p>
+            <a id="pydown" href="/static/files/converter.py" download>Converter.py</a>
+            <p>Create a folder containing both the 'Converter.py' and </p>
+            <p>your data sheet.</p>
+            <p>Navigate to your folder with shell of choice and run</p>
+            <p>using 'py converter.py'.</p>
+        </div>
+        <div id="omodalclose">+</div>
+    </div>
+
     <div class="loader"></div>
 
 </body> 
@@ -106,6 +122,16 @@
 <script>
     document.getElementById('modalclose').addEventListener('click', function() {
         document.getElementById('helpmodal').style.display = 'none';
+});
+</script>
+<script>
+    document.getElementById('offline').addEventListener('click', function() {
+        document.getElementById('offlinemodal').style.display = 'flex';
+});
+</script>
+<script>
+    document.getElementById('omodalclose').addEventListener('click', function() {
+        document.getElementById('offlinemodal').style.display = 'none';
 });
 </script>
 
