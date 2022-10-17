@@ -107,6 +107,10 @@
 
     <div class="loader"></div>
 
+    <div id="complete">
+        <img src="/static/tick.png">
+    </div>
+
 </body> 
 
 
@@ -141,5 +145,9 @@
         document.getElementById('fakebox').style.display = 'none';
         document.querySelector('.loader').style.display = 'flex'
         document.getElementById('submit').style.display = 'none';
+        setTimeout(function () {
+            document.querySelector('.loader').style.display = 'none'
+            document.getElementById('complete').style.display = 'flex'
+        }, 30000);
 });
 </script>

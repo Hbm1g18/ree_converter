@@ -305,3 +305,16 @@ input[type=submit]:hover{
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+#complete{
+    width: 20vw;
+    height: 20vw;
+    position: fixed;
+    bottom: 15vh;
+    left: 40vw;
+    display: none;
+}
+#complete img{
+    width: 100%;
+    height: 90%;
+}
