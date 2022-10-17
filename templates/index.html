@@ -1,9 +1,11 @@
 <head>
     <link href="{{ url_for('static',filename='styles/style.css') }}" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static',filename='files/favicon.ico') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Josefin+Sans:ital,wght@1,700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <title>REE Converter</title>
 </head>
 
 <body> 
@@ -89,8 +91,8 @@
                 <div class="exhead">13</div>
                 <div class="exhead">14</div>
             </div>
-            <p id="space">The program accepts any number of rows, the columns must be in this order.</p>
-            <p>Larger data sets will take longer to process.</p>
+            <p id="space">The program can convert up to 25 rows of data at once.</p>
+            <p>There is a 30 second time out on conversions, larger data sets will require multiple conversions.</p>
             <p>Data will be downloaded once complete in a .zip file. Within is the normalised data as well as</p>
             <p>a folder containing figures in both .png and .svg format.</p>
         </div>
