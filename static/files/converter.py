@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 from matplotlib.pyplot import figure
 import random
+import zipfile
+import shutil
 
 data = [0.367,0.957,0.137,0.711,0.231,0.087,0.306,0.058,0.381,0.085,0.249,0.036,0.248,0.038]
 
@@ -67,3 +69,11 @@ for i in range(len(converted_df)):
         os.makedirs(results_dir)
     plt.savefig(results_dir + png, bbox_inches='tight', dpi=300)
     plt.savefig(results_dir + svg, bbox_inches='tight', dpi=300)
+
+zf = zipfile.ZipFile("Results.zip", "w")
+for dirname, subdirs, files in os.walk("Results/"):
+    zf.write(dirname)
+    for filename in files:
+        zf.write(os.path.join(dirname, filename))
+zf.close()
+shutil.rmtree('Results/')
