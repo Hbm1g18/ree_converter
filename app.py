@@ -107,7 +107,7 @@ if __name__ == '__app__':
 
 
 # Run the app in powershell
-# $env:FLASK_APP = "main.py"
+# $env:FLASK_APP = "app.py"
 # $env:FLASK_DEBUG = "1"
 # flask run 
 

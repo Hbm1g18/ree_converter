@@ -1,6 +1,108 @@
-<form method='POST' enctype='multipart/form-data'>
-    {{form.hidden_tag()}}
-    {{form.file()}}
-    {{form.submit()}}
-    Shape is: {{ shape }}
-</form>
+<head>
+    <link href="{{ url_for('static',filename='styles/style.css') }}" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:wght@700&family=Josefin+Sans:ital,wght@1,700&family=Mochiy+Pop+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+</head>
+
+<body> 
+  <div id="ttl">
+        <h1>REE Converter</h1>
+        <p>Click the box below or drag and drop your REE file</p>
+    </div>
+    
+    <div id="convhold">
+        <div id="converter">
+            <form id="convform" method='POST' enctype='multipart/form-data'>
+                {{form.hidden_tag()}}
+                {{form.file()}}
+                {{form.submit()}}
+            </form>
+        </div>
+    </div>
+    <div id="fakebox"></div>
+
+    <div id="help">
+        <h1>How to use</h1>
+    </div>
+
+    <div id="helpmodal">
+        <div id="popup">
+            <h1>Formatting data</h1>
+            <p>Ensure that the filename is 'data' and the format is .CSV</p>
+            <p>The data should have 14 columns as represented below,</p>
+            <p>headers are not essential.</p>
+            <div class="mockexcel">
+                <div class="exhead">La</div>
+                <div class="exhead">Ce</div>
+                <div class="exhead">Pr</div>
+                <div class="exhead">Nd</div>
+                <div class="exhead">Sm</div>
+                <div class="exhead">Eu</div>
+                <div class="exhead">Gd</div>
+                <div class="exhead">Tb</div>
+                <div class="exhead">Dy</div>
+                <div class="exhead">Ho</div>
+                <div class="exhead">Er</div>
+                <div class="exhead">Tm</div>
+                <div class="exhead">Yb</div>
+                <div class="exhead">Lu</div>
+            </div>
+            <div class="mockexcel">
+                <div class="exhead">1</div>
+                <div class="exhead">2</div>
+                <div class="exhead">3</div>
+                <div class="exhead">4</div>
+                <div class="exhead">5</div>
+                <div class="exhead">6</div>
+                <div class="exhead">7</div>
+                <div class="exhead">8</div>
+                <div class="exhead">9</div>
+                <div class="exhead">10</div>
+                <div class="exhead">11</div>
+                <div class="exhead">12</div>
+                <div class="exhead">13</div>
+                <div class="exhead">14</div>
+            </div>
+            <div class="mockexcel">
+                <div class="exhead">1</div>
+                <div class="exhead">2</div>
+                <div class="exhead">3</div>
+                <div class="exhead">4</div>
+                <div class="exhead">5</div>
+                <div class="exhead">6</div>
+                <div class="exhead">7</div>
+                <div class="exhead">8</div>
+                <div class="exhead">9</div>
+                <div class="exhead">10</div>
+                <div class="exhead">11</div>
+                <div class="exhead">12</div>
+                <div class="exhead">13</div>
+                <div class="exhead">14</div>
+            </div>
+            <p id="space">The program accepts any number of rows, the columns must be in this order.</p>
+            <p>Larger data sets will take longer to process.</p>
+            <p>Data will be downloaded once complete in a .zip file. Within is the normalised data as well as</p>
+            <p>a folder containing figures in both .png and .svg format.</p>
+        </div>
+        <div id="modalclose">+</div>
+    </div>
+
+</body> 
+
+
+<script>
+    document.getElementById('submit').value="Convert"
+</script>
+
+<script>
+    document.getElementById('help').addEventListener('click', function() {
+        document.getElementById('helpmodal').style.display = 'flex';
+});
+</script>
+<script>
+    document.getElementById('modalclose').addEventListener('click', function() {
+        document.getElementById('helpmodal').style.display = 'none';
+});
+</script>
