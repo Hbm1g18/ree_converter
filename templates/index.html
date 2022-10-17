@@ -89,6 +89,8 @@
         <div id="modalclose">+</div>
     </div>
 
+    <div class="loader"></div>
+
 </body> 
 
 
@@ -104,5 +106,14 @@
 <script>
     document.getElementById('modalclose').addEventListener('click', function() {
         document.getElementById('helpmodal').style.display = 'none';
+});
+</script>
+
+<script>
+    document.getElementById('submit').addEventListener('click', function() {
+        document.getElementById('file').style.display = 'none';
+        document.getElementById('fakebox').style.display = 'none';
+        document.querySelector('.loader').style.display = 'flex'
+        document.getElementById('submit').style.display = 'none';
 });
 </script>

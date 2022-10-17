@@ -200,3 +200,22 @@ input[type=submit]:hover{
     cursor: pointer;
     color:rgb(156, 14, 14);
 }
+
+.loader {
+    border: 16px solid rgb(165, 231, 139);
+    border-radius: 50%;
+    border-top: 16px solid rgb(72, 122, 52);
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 45vh;
+    left: 43vw;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
